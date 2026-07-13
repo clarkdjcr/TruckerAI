@@ -1,30 +1,50 @@
 {
   "expo": {
     "name": "TruckerAI",
-    "slug": "TruckerAI",
+    "slug": "truckerai",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "scheme": "truckerai",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0A1628"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "TruckerAI uses your microphone for voice commands.",
+        "NSCameraUsageDescription": "TruckerAI uses your camera to scan documents.",
+        "NSPhotoLibraryUsageDescription": "TruckerAI accesses photos to attach to loads."
+      },
+      "bundleIdentifier": "com.anonymous.truckerai"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#0A1628"
       },
-      "predictiveBackGestureEnabled": false
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-audio",
+      "expo-image-picker"
+    ],
+    "extra": {
+      "apiUrl": "https://truckerai-backend-517086663129.us-central1.run.app"
     }
   }
 }
