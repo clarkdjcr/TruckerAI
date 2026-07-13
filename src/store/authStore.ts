@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import * as SecureStore from 'expo-secure-store';
+import * as SecureStore from '../api/storage';
 import { authApi } from '../api/client';
 import { User, HOSData } from '../types';
 

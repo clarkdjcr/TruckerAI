@@ -1,5 +1,5 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
-import * as SecureStore from 'expo-secure-store';
+import * as SecureStore from './storage';
 
 const API_URL = 'https://truckerai-backend-517086663129.us-central1.run.app/api/v1';
 
